@@ -1,76 +1,192 @@
-<!DOCTYPE html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-
-    <title>Narrow Jumbotron Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
-
   <body>
-
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+   <!-- star form data santri -->
+   <div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="mb-3">
+            <label class="form-label" for="tanggal">Tanggal</label>
+            <input class="form-control" id="tanggal" type="text" placeholder="Tanggal" data-sb-validations="" />
         </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <div class="mb-3">
+            <label class="form-label" for="nama">Nama</label>
+            <input class="form-control" id="nama" type="text" placeholder="Nama" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="nama:required">Nama is required.</div>
         </div>
-      </div>
+        <div class="mb-3">
+            <label class="form-label" for="pondok">Pondok</label>
+            <input class="form-control" id="pondok" type="text" placeholder="Pondok" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="pondok:required">Pondok is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="konsulat">Konsulat</label>
+            <input class="form-control" id="konsulat" type="text" placeholder="Konsulat" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="konsulat:required">Konsulat is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kelas">Kelas</label>
+            <input class="form-control" id="kelas" type="text" placeholder="Kelas" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="kelas:required">Kelas is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="stambuk">Stambuk</label>
+            <input class="form-control" id="stambuk" type="text" placeholder="Stambuk" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="stambuk:required">Stambuk is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="rayon">Rayon</label>
+            <input class="form-control" id="rayon" type="text" placeholder="Rayon" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="rayon:required">Rayon is required.</div>
+        </div>
+        
+         <!-- end form data santri -->
+           <!-- star form data penerima -->
+           
+        <h3>Data Penerima</h3>
+        <div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="mb-3">
+            <label class="form-label" for="penerima">Penerima</label>
+            <input class="form-control" id="penerima" type="text" placeholder="Penerima" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="penerima:required">Penerima is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="telepon">Telepon</label>
+            <input class="form-control" id="telepon" type="text" placeholder="Telepon" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="telepon:required">Telepon is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="alamat">Alamat</label>
+            <input class="form-control" id="alamat" type="text" placeholder="Alamat" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="alamat:required">Alamat is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kelurahan">Kelurahan</label>
+            <input class="form-control" id="kelurahan" type="text" placeholder="Kelurahan" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="kelurahan:required">Kelurahan is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kecamatan">Kecamatan</label>
+            <input class="form-control" id="kecamatan" type="text" placeholder="Kecamatan" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="kecamatan:required">Kecamatan is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kotaKabupaten">Kota/Kabupaten</label>
+            <input class="form-control" id="kotaKabupaten" type="text" placeholder="Kota/Kabupaten" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="kotaKabupaten:required">Kota/Kabupaten is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="provinsi">Provinsi</label>
+            <input class="form-control" id="provinsi" type="text" placeholder="Provinsi" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="provinsi:required">Provinsi is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="kodepos">Kodepos</label>
+            <input class="form-control" id="kodepos" type="text" placeholder="Kodepos" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="kodepos:required">Kodepos is required.</div>
+        </div>
+        
+        <!-- end form data penerima -->
+        <h3>Detil Paket</h3>
+        <!-- star form jenis paket -->
+        <div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="mb-3">
+            <label class="form-label" for="jenisPaket">Jenis Paket</label>
+            <input class="form-control" id="jenisPaket" type="text" placeholder="Jenis Paket" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="jenisPaket:required">Jenis Paket is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="jumlahPaket">Jumlah Paket</label>
+            <input class="form-control" id="jumlahPaket" type="text" placeholder="Jumlah Paket" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="jumlahPaket:required">Jumlah Paket is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="koli">Koli</label>
+            <input class="form-control" id="koli" type="text" placeholder="Koli" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="koli:required">Koli is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="berat">Berat</label>
+            <input class="form-control" id="berat" type="text" placeholder="Berat" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="berat:required">Berat is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="region">Region</label>
+            <input class="form-control" id="region" type="text" placeholder="Region" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="region:required">Region is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="biayaPelunasan">Biaya Pelunasan</label>
+            <input class="form-control" id="biayaPelunasan" type="text" placeholder="Biaya Pelunasan" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="biayaPelunasan:required">Biaya Pelunasan is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="provinsi">Provinsi</label>
+            <input class="form-control" id="provinsi" type="text" placeholder="Provinsi" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="provinsi:required">Provinsi is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="sistem">Sistem</label>
+            <input class="form-control" id="sistem" type="text" placeholder="Sistem" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="sistem:required">Sistem is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="tujuan">Tujuan</label>
+            <input class="form-control" id="tujuan" type="text" placeholder="Tujuan" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="tujuan:required">Tujuan is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="penaggungJawab">Penaggung Jawab</label>
+            <input class="form-control" id="penaggungJawab" type="text" placeholder="Penaggung Jawab" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="penaggungJawab:required">Penaggung Jawab is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="tanggalKirim">Tanggal Kirim</label>
+            <input class="form-control" id="tanggalKirim" type="text" placeholder="Tanggal Kirim" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="tanggalKirim:required">Tanggal Kirim is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="pengirim">Pengirim</label>
+            <input class="form-control" id="pengirim" type="text" placeholder="Pengirim" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="pengirim:required">Pengirim is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="tanggalDiterima">Tanggal Diterima</label>
+            <input class="form-control" id="tanggalDiterima" type="text" placeholder="Tanggal Diterima" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="tanggalDiterima:required">Tanggal Diterima is required.</div>
+        </div>
+        
+        <!-- star form jenis paket -->
+        
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+        </div>
+        
+        
+        
+    </form>
+</div>
 
-      <footer class="footer">
-        <p>© Company 2017</p>
-      </footer>
-
-    </div> <!-- /container -->
-  
-
-</body>
+   
+    
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
 </html>
