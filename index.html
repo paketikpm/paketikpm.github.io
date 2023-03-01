@@ -13,7 +13,7 @@
         <h3>Input Data Paket</h3>
         <div class="mb-3">
             <label class="form-label" for="tanggal">Tanggal</label>
-            <input class="form-control" name="tanggal" id="tanggal" type="text" placeholder="Tanggal" data-sb-validations="" />
+            <input class="form-control" name="tanggal" id="tanggal" type="datetime-local" placeholder="Tanggal" data-sb-validations="" />
         </div>
         <div class="mb-3">
             <label class="form-label" for="nama">Nama</label>
@@ -22,8 +22,12 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="pondok">Pondok</label>
-            <input class="form-control" name="pondok" id="pondok" type="text" placeholder="Pondok" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="pondok:required">Pondok is required.</div>
+            <select name="pondok" id="pondok">
+                <option value="Gontor 1">Gontor 1</option>
+                <option value="Gontor 2">Gontor 2</option>
+                <option value="Gontor 3">Gontor 3</option>
+                <option value="Gontor 4">Gontor 4</option>
+              </select><div class="invalid-feedback" data-sb-feedback="pondok:required">Pondok is required.</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="konsulat">Konsulat</label>
@@ -57,7 +61,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="telepon">Telepon</label>
-            <input class="form-control" name="telepon" id="telepon" type="text" placeholder="Telepon" data-sb-validations="required" />
+            <input class="form-control" name="telepon" id="telepon" type="number" placeholder="Telepon" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="telepon:required">Telepon is required.</div>
         </div>
         <div class="mb-3">
@@ -87,7 +91,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="kodepos">Kodepos</label>
-            <input class="form-control" name="kodepos" id="kodepos" type="text" placeholder="Kodepos" data-sb-validations="required" />
+            <input class="form-control" name="kodepos" id="kodepos" type="number" placeholder="Kodepos" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kodepos:required">Kodepos is required.</div>
         </div>
         
@@ -102,7 +106,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="jumlahPaket">Jumlah Paket</label>
-            <input class="form-control" name="jumlah" id="jumlahPaket" type="text" placeholder="Jumlah Paket" data-sb-validations="required" />
+            <input class="form-control" name="jumlah" id="jumlahPaket" type="number" placeholder="Jumlah Paket" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="jumlahPaket:required">Jumlah Paket is required.</div>
         </div>
         <div class="mb-3">
@@ -132,7 +136,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="sistem">Sistem</label>
-            <input class="form-control" name="sistem" id="sistem" type="text" placeholder="Sistem" data-sb-validations="required" />
+            <input class="form-control" name="sistem" id="sistem" type="radio" placeholder="Sistem" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="sistem:required">Sistem is required.</div>
         </div>
         <div class="mb-3">
