@@ -187,12 +187,23 @@
             <div class="text-center text-danger mb-3">Error sending message!</div>
         </div>
         <div class="d-grid">
-            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-primary btn-kirim" type="submit">Submit</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
         </div>
         
         
         
     </form>
+
+    <div class="alert alert-success d-none my-alert" role="alert">
+        Sukses!!!
+      </div>
+    <div class="alert alert-danger d-none my-alertx" role="alert">
+        Error!!!
+      </div>
 </div>
 
    
@@ -202,12 +213,31 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxrFaVZM3iesBh6IJjoMvv2IIvIWYLZxWduP1fiViXd7BH9mUd5pX_jBy2AClJxsJOsvQ/exec'
         const form = document.forms['submit-to-google-sheet']
-      
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert')
+        const myAlertx = document.querySelector('.my-alertx')
+        
+
         form.addEventListener('submit', e => {
           e.preventDefault()
+// loading dan alert
+
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            .then(response => {
+                btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        myAlert.classList.toggle('d-none');
+                
+                console.log('Success!', response);
+            })
+            .catch(error => {
+                myAlertx.classList.toggle('d-none');
+                console.error('Error!', error.message);
+        })
         })
       </script>
 
