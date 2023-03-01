@@ -7,22 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
-    <h3>Input Data Paket</h3>
-   <!-- star form data santri -->
-   <div class="container px-5 my-5">
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+      <!-- star form data santri -->
+      <div class="container px-5 my-5">
+          <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="submit-to-google-sheet">
+        <h3>Input Data Paket</h3>
         <div class="mb-3">
             <label class="form-label" for="tanggal">Tanggal</label>
-            <input class="form-control" id="tanggal" type="text" placeholder="Tanggal" data-sb-validations="" />
+            <input class="form-control" name="tanggal" id="tanggal" type="text" placeholder="Tanggal" data-sb-validations="" />
         </div>
         <div class="mb-3">
             <label class="form-label" for="nama">Nama</label>
-            <input class="form-control" id="nama" type="text" placeholder="Nama" data-sb-validations="required" />
+            <input class="form-control" name="nama" id="nama" type="text" placeholder="Nama" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="nama:required">Nama is required.</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="pondok">Pondok</label>
-            <input class="form-control" id="pondok" type="text" placeholder="Pondok" data-sb-validations="required" />
+            <input class="form-control" name="pondok" id="pondok" type="text" placeholder="Pondok" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="pondok:required">Pondok is required.</div>
         </div>
         <div class="mb-3">
@@ -174,7 +174,7 @@
             <div class="text-center text-danger mb-3">Error sending message!</div>
         </div>
         <div class="d-grid">
-            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            <button type="submit">Submit</button>
         </div>
         
         
@@ -186,5 +186,18 @@
     
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxrFaVZM3iesBh6IJjoMvv2IIvIWYLZxWduP1fiViXd7BH9mUd5pX_jBy2AClJxsJOsvQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+</body>
 </html>
