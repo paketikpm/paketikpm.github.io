@@ -4,25 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paket Ikpm</title>
+    <link rel="shortcut icon" href="logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <span class="navbar-brand mb-0 h1" href="#" style="">
+            <img src="logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Paket Ikpm
+          </span>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Input</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pondok.html">Pondok</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ikpm.html" tabindex="-1" aria-disabled="true">Ikpm</a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
       <!-- star form data santri -->
       <div class="container px-5 my-5">
           <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="submit-to-google-sheet">
         <h3>Input Data Paket</h3>
-        <div class="mb-3">
+        <div class="row">
+        <div class="col mb-3">
             <label class="form-label" for="tanggal">Tanggal</label>
             <input class="form-control" name="tanggal" id="tanggal" type="datetime-local" placeholder="Tanggal" data-sb-validations="" />
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="nama">Nama</label>
-            <input class="form-control" name="nama" id="nama" type="text" placeholder="Nama" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="nama:required">Nama is required.</div>
-        </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label"  for="pondok">Pondok</label>
             <select class="form-select" name="pondok">
+                <option selected value=""> Pilih Pondok</option>
                 <option value="Gontor 1">Gontor 1</option>
                 <option value="Gontor 2">Gontor 2</option>
                 <option value="Gontor 3">Gontor 3</option>
@@ -35,146 +56,200 @@
               </select>
             <div class="invalid-feedback" data-sb-feedback="pondok:required">Pondok is required.</div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="konsulat">Konsulat</label>
-            <input class="form-control" name="konsulat" id="konsulat" type="text" placeholder="Konsulat" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="konsulat:required">Konsulat is required.</div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label class="form-label" for="nama">Nama</label>
+            <input class="form-control" name="nama" id="nama" type="text" placeholder="Nama" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="nama:required">Nama is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="kelas">Kelas</label>
             <input class="form-control" name="kelas" id="kelas" type="text" placeholder="Kelas" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kelas:required">Kelas is required.</div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="stambuk">Stambuk</label>
-            <input class="form-control" name="stambuk" id="stambuk" type="text" placeholder="Stambuk" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="stambuk:required">Stambuk is required.</div>
+    </div>
+        
+        <div class="row g-3">
+            
+            </div>
+            <div class="row g-3">
+        
+            <div class="col mb-3">
+                <label class="form-label" for="stambuk">Stambuk</label>
+                <input class="form-control" name="stambuk" id="stambuk" type="number" placeholder="Stambuk" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="stambuk:required">Stambuk is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="rayon">Rayon</label>
+                <input class="form-control" name="rayon" id="rayon" type="text" placeholder="Rayon" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="rayon:required">Rayon is required.</div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="rayon">Rayon</label>
-            <input class="form-control" name="rayon" id="rayon" type="text" placeholder="Rayon" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="rayon:required">Rayon is required.</div>
+        <div class="col mb-3">
+            <label class="form-label" for="konsulat">Konsulat</label>
+            <input class="form-control" name="konsulat" id="konsulat" type="text" placeholder="Konsulat" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="konsulat:required">Konsulat is required.</div>
         </div>
         
-         <!-- end form data santri -->
-           <!-- star form data penerima -->
+        <!-- end form data santri -->
+        <!-- star form data penerima -->
            
       <h3>Data Penerima</h3>
-        <div class="mb-3">
-            <label class="form-label" for="penerima">Penerima</label>
-            <input class="form-control" name="penerima" id="penerima" type="text" placeholder="Penerima" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="penerima:required">Penerima is required.</div>
+      <div class="row">
+          <div class=" col mb-3">
+              <label class="form-label" for="penerima">Penerima</label>
+              <input class="form-control" name="penerima" id="penerima" type="text" placeholder="Penerima" data-sb-validations="required" />
+              <div class="invalid-feedback" data-sb-feedback="penerima:required">Penerima is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="telepon">Telepon</label>
+                <input class="form-control" name="telepon" id="telepon" type="number" placeholder="Telepon" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="telepon:required">Telepon is required.</div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="telepon">Telepon</label>
-            <input class="form-control" name="telepon" id="telepon" type="number" placeholder="Telepon" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="telepon:required">Telepon is required.</div>
-        </div>
-        <div class="mb-3">
+        <div class="row g-3">
+        <div class="col mb-3">
             <label class="form-label" for="alamat">Alamat</label>
             <input class="form-control" name="alamat" id="alamat" type="text" placeholder="Alamat" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="alamat:required">Alamat is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="kelurahan">Kelurahan</label>
             <input class="form-control" name="kelurahan" id="kelurahan" type="text" placeholder="Kelurahan" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kelurahan:required">Kelurahan is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="kecamatan">Kecamatan</label>
             <input class="form-control" name="kecamatan" id="kecamatan" type="text" placeholder="Kecamatan" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kecamatan:required">Kecamatan is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="kotaKabupaten">Kota/Kabupaten</label>
             <input class="form-control" name="kota" id="kotaKabupaten" type="text" placeholder="Kota/Kabupaten" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kotaKabupaten:required">Kota/Kabupaten is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="provinsi">Provinsi</label>
             <input class="form-control" name="provinsi" id="provinsi" type="text" placeholder="Provinsi" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="provinsi:required">Provinsi is required.</div>
         </div>
-        <div class="mb-3">
+        <div class="col mb-3">
             <label class="form-label" for="kodepos">Kodepos</label>
             <input class="form-control" name="kodepos" id="kodepos" type="number" placeholder="Kodepos" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="kodepos:required">Kodepos is required.</div>
         </div>
+    </div>
         
         <!-- end form data penerima -->
         <h3>Detil Paket</h3>
         <!-- star form jenis paket -->
-      
-        <div class="mb-3">
-            <label class="form-label" for="jenisPaket">Jenis Paket</label>
-            <input class="form-control" name="jenispaket" id="jenisPaket" type="text" placeholder="Jenis Paket" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="jenisPaket:required">Jenis Paket is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="jumlahPaket">Jumlah Paket</label>
-            <input class="form-control" name="jumlah" id="jumlahPaket" type="number" placeholder="Jumlah Paket" data-sb-validations="required" />
-            <span class="input-group-text">Paket</span>
-            <div class="invalid-feedback" data-sb-feedback="jumlahPaket:required">Jumlah Paket is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="koli">Koli</label>
-            <input class="form-control" name="koli" id="koli" type="text" placeholder="Koli" data-sb-validations="required" />
-            <span class="input-group-text">Koli</span>
-            <div class="invalid-feedback" data-sb-feedback="koli:required">Koli is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="berat">Berat</label>
-            <input class="form-control" name="berat" id="berat" type="text" placeholder="Berat" data-sb-validations="required" />
-            <span class="input-group-text">Kg</span>
-            <div class="invalid-feedback" data-sb-feedback="berat:required">Berat is required.</div>
-        </div>
+        
+        <div class="row g-4 mb-3">
+            <div class="col mb-3">
+                <label class="form-label" for="jenisPaket">Jenis Paket</label>
+                <input class="form-control" name="jenispaket" id="jenisPaket" type="text" placeholder="Jenis Paket" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="jenisPaket:required">Jenis Paket is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="jumlahPaket">Jumlah Paket</label>
+                <div class="input-group">
+                    <input class="form-control" name="jumlah" id="jumlahPaket" type="number" placeholder="Jumlah Paket" data-sb-validations="required" />
+                    <span class="input-group-text">Paket</span>
+
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="jumlahPaket:required">Jumlah Paket is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="koli">Koli</label>
+                <div class="input-group mb-3">
+                    <input class="form-control" name="koli" id="koli" type="number" placeholder="Koli" data-sb-validations="required" />
+                    <span class="input-group-text">Koli</span>    
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="koli:required">Koli is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="berat">Berat</label>
+                <div class="input-group mb-3">
+                    <input class="form-control" name="berat" id="berat" type="nnumber" placeholder="Berat" data-sb-validations="required" />
+                <span class="input-group-text">Kg</span>    
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="berat:required">Berat is required.</div>
+            </div>
+         </div>
         <div class="mb-3">
             <label class="form-label" for="region">Region</label>
             <input class="form-control" name="region" id="region" type="text" placeholder="Region" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="region:required">Region is required.</div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="biayaPelunasan">Biaya</label>
-            <input class="form-control" name="biaya" id="biayaPelunasan" type="text" placeholder="Biaya Pelunasan" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="biayaPelunasan:required">Biaya is required.</div>
+        <div class="row g-3">
+
+            <div class="col mb-3">
+                <label class="form-label" for="biayaPelunasan">Biaya</label>
+                <input class="form-control" name="biaya" id="biayaPelunasan" type="Price" placeholder="Biaya" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="biayaPelunasan:required">Biaya is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label for="" class="form-label"> Pelunasan</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="pelunasan" type="radio" value="Lunas" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Lunas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="pelunasan" type="radio" value="COD" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        COD
+                </label>
+              </div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="sistem">Sistem</label>
+                <input class="form-control" name="sistem" id="sistem" type="text" placeholder="Sistem" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="sistem:required">Sistem is required.</div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="provinsi">Pelunasan</label>
-            <input class="form-control" name="pelunasan" id="provinsi" type="text" placeholder="Provinsi" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="provinsi:required">Provinsi is required.</div>
+        <div class="row g-3">
+
+            <div class="col mb-3">
+                <label class="form-label" for="tujuan">Tujuan</label>
+                <input class="form-control" name="tujuan" id="tujuan" type="text" placeholder="Tujuan" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="tujuan:required">Tujuan is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="penaggungJawab">Penaggung Jawab</label>
+                <input class="form-control" name="penanggungjawab" id="penaggungJawab" type="text" placeholder="Penaggung Jawab" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="penaggungJawab:required">Penaggung Jawab is required.</div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="sistem">Sistem</label>
-            <input class="form-control" name="sistem" id="sistem" type="text" placeholder="Sistem" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="sistem:required">Sistem is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="tujuan">Tujuan</label>
-            <input class="form-control" name="tujuan" id="tujuan" type="text" placeholder="Tujuan" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="tujuan:required">Tujuan is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="penaggungJawab">Penaggung Jawab</label>
-            <input class="form-control" name="penanggungjawab" id="penaggungJawab" type="text" placeholder="Penaggung Jawab" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="penaggungJawab:required">Penaggung Jawab is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="tanggalKirim">Tanggal Kirim</label>
-            <input class="form-control" name="tanggalkirim" id="tanggalKirim" type="text" placeholder="Tanggal Kirim" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="tanggalKirim:required">Tanggal Kirim is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="pengirim">Pengirim</label>
-            <input class="form-control" name="pengirim" id="pengirim" type="text" placeholder="Pengirim" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="pengirim:required">Pengirim is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="tanggalDiterima">Tanggal Diterima</label>
-            <input class="form-control" name="tanggalditerima" id="tanggalDiterima" type="text" placeholder="Tanggal Diterima" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="tanggalDiterima:required">Tanggal Diterima is required.</div>
+        <div class="row g-3">
+
+            <div class="col mb-3">
+                <label class="form-label" for="tanggalKirim">Tanggal Kirim</label>
+                <input class="form-control" name="tanggalkirim" id="tanggalKirim" type="date" placeholder="Tanggal Kirim" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="tanggalKirim:required">Tanggal Kirim is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="tanggalDiterima">Tanggal Diterima</label>
+                <input class="form-control" name="tanggalditerima" id="tanggalDiterima" type="date" placeholder="Tanggal Diterima" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="tanggalDiterima:required">Tanggal Diterima is required.</div>
+            </div>
+            <div class="col mb-3">
+                <label class="form-label" for="pengirim">Pengirim</label>
+                <input class="form-control" name="pengirim" id="pengirim" type="text" placeholder="Pengirim" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="pengirim:required">Pengirim is required.</div>
+            </div>
         </div>
         
-        <!-- star form jenis paket -->
+        <!-- end form jenis paket -->
+
+        <div class="alert alert-success d-none my-alert" role="alert">
+            Sukses!!!
+          </div>
+        <div class="alert alert-danger d-none my-alertx" role="alert">
+            Error!!!
+          </div>
         
         <div class="d-none" id="submitSuccessMessage">
             <div class="text-center mb-3">
@@ -198,12 +273,7 @@
         
     </form>
 
-    <div class="alert alert-success d-none my-alert" role="alert">
-        Sukses!!!
-      </div>
-    <div class="alert alert-danger d-none my-alertx" role="alert">
-        Error!!!
-      </div>
+   
 </div>
 
    
@@ -229,6 +299,7 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
                 btnLoading.classList.toggle('d-none');
+                form.reset();
         btnKirim.classList.toggle('d-none');
         myAlert.classList.toggle('d-none');
                 
